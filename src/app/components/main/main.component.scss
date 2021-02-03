@@ -1,0 +1,102 @@
+@import "/src/variables.scss";
+
+.slide{
+    display: grid;
+    grid-template-areas: "testimony photo";
+    grid-template-columns: 50% 50%;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    padding: 100px 200px;
+    background-image: url(~src/assets/images/pattern-bg.svg);
+    background-repeat: no-repeat;
+    background-position: right 19% bottom 58%;
+    max-width: 945px;
+    max-height: 575px;
+    background-size: 45%;
+    
+
+    .testimony, .photo{
+        display: table;
+        height: 100%;
+    }
+
+    .testimony{
+        background-image: url(~src/assets/images/pattern-quotes.svg);
+        background-repeat: no-repeat;
+        background-position: 78px 120px;
+        grid-area: testimony;
+
+        .testimony-content{
+            display: table-cell;
+            vertical-align: middle;
+            min-width: 545px;
+            position: relative;
+
+            h2{
+                line-height: 1.5;
+                font-weight: 300;
+                font-size: 27px;
+                color: $darkBlueColor;
+            }
+
+            .name{
+                font-size: 14px;
+                font-size: 20px;
+                font-weight: 500;
+                color: $darkBlueColor;
+            }
+            .role{
+                margin-left: 10px;
+                font-size: 17px;
+                font-weight: 600;
+                color: $grayishBlueColor;
+            }
+        }
+    }
+    .photo{
+        grid-area: photo;
+
+        .img-container {
+            text-align: center;
+            display: table-cell;
+            vertical-align: middle;
+
+            .main-photo{
+                -webkit-box-shadow: 0px 0px 17px -9px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 0px 17px -9px rgba(0,0,0,0.75);
+                box-shadow: 0px 0px 17px -9px rgba(0,0,0,0.75);
+            }
+
+            .slider-switch{
+                min-width: 100px;
+                height: 50px;
+                background-color: white;
+                border-radius: 25px;
+                position: absolute;
+                margin-top: -35px;
+                margin-left: 58px;
+                -webkit-box-shadow: 0px 9px 17px -9px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 9px 17px -9px rgba(0,0,0,0.75);
+                box-shadow: 0px 9px 17px -9px rgba(0,0,0,0.75);
+                display: flex;
+                justify-content: space-around;
+
+                .prev-img{
+                    width: 50%;
+                    margin-top: 3px;
+                    cursor: pointer;
+                }
+                .next-img{
+                    width: 50%;
+                    margin-top: 3px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+}

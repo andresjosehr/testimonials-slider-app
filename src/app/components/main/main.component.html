@@ -1,0 +1,22 @@
+
+<div
+class="slide"
+*ngFor='let testimony of testimonies; let i = index' 
+[@slideTrigger]='i==activeSlide? "active" : "inactive"'>
+        <div class="testimony">
+            <div class="testimony-content">
+                <h2> {{testimony.testimony}} </h2>
+                <span class="name">{{testimony.name}}</span>
+                <span class="role">{{testimony.role}}</span> 
+            </div>
+        </div>
+        <div class="photo"> 
+            <div class="img-container">
+                <img class="main-photo" width="472" height="472" [src]="i==0 ?'assets/images/image-tanya.jpg' :'assets/images/image-john.jpg'" alt="{{testimony.name}}">
+                <div class="slider-switch">
+                    <div (click)='changeSlide("prev")' class="prev-img"><img src="assets/images/icon-prev.svg" alt="prev"></div>
+                    <div (click)='changeSlide("next")' class="next-img"><img src="assets/images/icon-next.svg" alt="next"></div>
+                </div>
+            </div>
+        </div>
+</div>
