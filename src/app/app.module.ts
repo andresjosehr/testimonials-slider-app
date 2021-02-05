@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { MainComponent } from './components/main/main.component';
 import { HttpClientModule } from '@angular/common/http'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
+import { NgxSkeletonLoaderModule } from 'ngx-skeleton-loader';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
   imports: [
     BrowserModule,
     HttpClientModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    NgxSkeletonLoaderModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

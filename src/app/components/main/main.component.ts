@@ -32,14 +32,14 @@ export class MainComponent implements OnInit {
 
   initSlideInterval(){
 
-    /* this.inverval = setInterval(() => {
+    this.inverval = setInterval(() => {
       this.activeSlide++
 
       if(this.testimonies.length==this.activeSlide){
         this.activeSlide=0
       }
 
-    }, 5000) */
+    }, 5000)
   }
 
   getTestimonies(): void{

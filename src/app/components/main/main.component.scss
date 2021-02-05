@@ -60,10 +60,22 @@
     .photo{
         grid-area: photo;
 
+
+
+        .img-container.skeleton {
+            text-align: center;
+            display: table-cell;
+            padding-top: 36px;
+            vertical-align: top;
+        }
         .img-container {
             text-align: center;
             display: table-cell;
             vertical-align: middle;
+
+            .img-skeleton-mobile{
+                display: none;
+            }
 
             .main-photo{
                 width: 83%;
@@ -112,7 +124,15 @@
 
         background-size: 650px;
         background-position: right 50% top 0px;
-
+        
+        .testimony.skeleton {
+            width: 80%;
+            .testimony-content.skeleton{
+                padding: 0px !important; 
+                min-width: auto;
+                width: 100%;
+            }
+        }
         .testimony{
 
             background-position: 50% 12px;
@@ -134,6 +154,12 @@
 
         .photo{
                 .img-container {
+                    .img-skeleton-mobile{
+                        display: block;
+                    }
+                    .img-skeleton-desktop{
+                        display: none;
+                    }
                     .slider-switch{
                         left: 0;
                         right: 0;
