@@ -12,7 +12,7 @@ class="slide"
         </div>
         <div class="photo"> 
             <div class="img-container">
-                <img class="main-photo" width="472" height="472" [src]="i==0 ?'assets/images/image-tanya.jpg' :'assets/images/image-john.jpg'" alt="{{testimony.name}}">
+                <img class="main-photo" [src]="i==0 ?'assets/images/image-tanya.jpg' :'assets/images/image-john.jpg'" alt="{{testimony.name}}">
                 <div class="slider-switch">
                     <div (click)='changeSlide("prev")' class="prev-img"><img src="assets/images/icon-prev.svg" alt="prev"></div>
                     <div (click)='changeSlide("next")' class="next-img"><img src="assets/images/icon-next.svg" alt="next"></div>

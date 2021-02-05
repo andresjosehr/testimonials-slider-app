@@ -20,7 +20,7 @@ export class MainComponent implements OnInit {
 
   testimonies!: Array<Testimony>
   activeSlide: number = 0
-  inverval!: NodeJS.Timeout;
+  inverval: any;
 
   constructor(
     private testimonialsService: TestimonialsService
@@ -32,17 +32,14 @@ export class MainComponent implements OnInit {
 
   initSlideInterval(){
 
-    let epale = 0;
-    this.inverval = setInterval(() => {
-      console.log(epale)
-      epale++
+    /* this.inverval = setInterval(() => {
       this.activeSlide++
 
       if(this.testimonies.length==this.activeSlide){
         this.activeSlide=0
       }
 
-    }, 5000)
+    }, 5000) */
   }
 
   getTestimonies(): void{
